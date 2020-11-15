@@ -16,6 +16,9 @@ class URL {
     string getScheme();
     string getAuthority();
     string getPath();
+  
+  private:
+    string link, scheme, authority, path;
 };
 
 #endif   // _URL_H_
