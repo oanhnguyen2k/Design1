@@ -93,7 +93,7 @@ void image::setHeight(double height) {
 }
 
 void image::setWidth(double width) {
-	width_ = width_;
+	width_ = width;
 }
 
 void image::setAperatureSize(int aperatureSize) {
