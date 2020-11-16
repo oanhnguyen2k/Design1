@@ -7,14 +7,14 @@ url::url() {
   path_ = "";
 }
 
-url::url(string link) {
+url::url(std::string link) {
   int pos, p, pos2, m;
   
   pos2 = link.find(":");
   link_ = link;
 
   //Loop to find "//" and "/"
-  for (int i = 0; i < link.size(); i++)
+  for (unsigned long int i = 0; i < link.size(); i++)
   {
       if(link[i] == '/' && link[i+1] == '/')
       {
@@ -28,23 +28,23 @@ url::url(string link) {
       }
   }
   scheme_ = link.substr(0, pos2 + 1);       
-  m_ = ((link.size() - pos2) - (link.size() - p)) - 1;
+  m = ((link.size() - pos2) - (link.size() - p)) - 1;
   authority_ = link.substr(pos, m);      
   path_ = link.substr(p);
 }
 
-string url::getFull() {
+std::string url::getFull() {
   return link_;
 }
 
-string url::getScheme() {
+std::string url::getScheme() {
   return scheme_;
 }
 
-string url::getAuthority() {
+std::string url::getAuthority() {
   return authority_;
 }
 
-string url::getPath() {
+std::string url::getPath() {
   return path_;
 }
