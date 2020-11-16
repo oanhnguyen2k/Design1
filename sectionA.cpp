@@ -1,14 +1,16 @@
+// This is a test file for section A
 #include <iostream>
 
-#include "url.cpp"
 #include "url.h"
 
 using namespace std;
 
 int main()
 {
-   url l1();
-   url l2("https://www.highline.edu/about-us/");
+   string linkHighline = "https://www.highline.edu/about-us/";
+
+   url l1;
+   url l2(linkHighline);
    
    cout << l1.getFull() << endl;
    cout << l1.getScheme() << endl;
